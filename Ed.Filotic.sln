@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{3EF5A67D-A92C-4F6E-9D76-2D762DA753D2}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{1339EE89-5927-4F1D-9D66-82DFDD6A9EBB}"
+	ProjectSection(SolutionItems) = preProject
+		doc\USING.md = doc\USING.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1339EE89-5927-4F1D-9D66-82DFDD6A9EBB} = {3EF5A67D-A92C-4F6E-9D76-2D762DA753D2}
+	EndGlobalSection
+EndGlobal
