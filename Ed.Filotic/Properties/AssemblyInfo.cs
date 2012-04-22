@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Ed.Filotic")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("A virtual file system library for .NET and Mono.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
+[assembly: AssemblyCompany("http://github.com/eropple/filotic")]
 [assembly: AssemblyProduct("Ed.Filotic")]
-[assembly: AssemblyCopyright("Copyright © Microsoft 2012")]
+[assembly: AssemblyCopyright("Copyright © Ed Ropple 2012; released under the ISC license.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
