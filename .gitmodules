@@ -1,0 +1,3 @@
+[submodule "deps/dotnetzip"]
+	path = deps/dotnetzip
+	url = git@github.com:eropple/dotnetzip.git
