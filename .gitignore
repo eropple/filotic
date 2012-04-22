@@ -1,0 +1,16 @@
+# Build Folders (you can keep bin if you'd like, to store dlls and pdbs)
+bin
+obj
+
+# mstest test results
+TestResults
+
+*.suo
+*.userprefs
+*.vs10x
+_ReSharper*
+*.ReSharper.user
+*.resharper.user
+_Upgrade*
+UpgradeLog*.XML
+*~
