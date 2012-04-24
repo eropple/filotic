@@ -71,16 +71,15 @@ namespace Ed.Filotic.FileSystems
             }
         }
 
-        public override void Delete(AbstractPath path, bool deleteChildPaths = false)
+        public override void Delete(FilePath path)
+        {
+            File.Delete(PathToRealPath(path));
+        }
+
+        public override void Delete(DirectoryPath path, bool deleteChildPaths = false)
         {
             String rawPath = PathToRealPath(path);
 
-            if (File.Exists(rawPath))
-            {
-                File.Delete(rawPath);
-                return;
-            }
-            
             if (Directory.Exists(rawPath))
             {
                 Directory.Delete(rawPath, deleteChildPaths);

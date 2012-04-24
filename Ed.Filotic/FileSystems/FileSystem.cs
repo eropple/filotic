@@ -79,7 +79,7 @@ namespace Ed.Filotic.FileSystems
         public abstract Stream Create(FilePath file, Boolean openAsReadWrite = false, Boolean createParents = true);
 
         /// <summary>
-        /// Deletes the given path.
+        /// Deletes the given directory.
         /// </summary>
         /// <remarks>
         /// If the directory does not exist, this is a no-op. No exception will
@@ -88,10 +88,18 @@ namespace Ed.Filotic.FileSystems
         /// <param name="path">The path to delete.</param>
         /// <param name="deleteChildPaths">
         /// If true, deletes all child items in the path (the moral equivalent
-        /// of "rm -rf"). If false, will throw an exception if this is a directory
-        /// and has any children.
+        /// of "rm -rf"). If false, will throw an exception if this has any children.
         /// </param>
-        public abstract void Delete(AbstractPath path, Boolean deleteChildPaths = false);
+        public abstract void Delete(DirectoryPath path, Boolean deleteChildPaths = false);
+
+        /// <summary>
+        /// Deletes the given file.
+        /// </summary>
+        /// <remarks>
+        /// If the file does not exist, this is a no-op. No exception will be thrown.
+        /// </remarks>
+        /// <param name="path">The path to delete.</param>
+        public abstract void Delete(FilePath path);
 
         #region File Operations
         /// <summary>

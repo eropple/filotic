@@ -40,6 +40,11 @@ namespace Ed.Filotic.Paths
                 {
                     throw new IOException("Path segments may not be all-whitespace or the empty string.");
                 }
+
+                if (pathSegments[i] == "." || pathSegments[i] == "..")
+                {
+                    throw new IOException("Path segments '.' and '..' are disallowed for security reasons.");
+                }
             }
 
             this.RawPathSegments = pathSegments;
