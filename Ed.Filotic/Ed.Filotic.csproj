@@ -40,8 +40,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FileAccessMode.cs" />
+    <Compile Include="FileSystems\DirectoryFileSystem.cs" />
+    <Compile Include="FileSystems\FileSystem.cs" />
+    <Compile Include="FileSystems\FileSystemHelper.cs" />
+    <Compile Include="Paths\AbstractPath.cs" />
+    <Compile Include="Paths\DirectoryPath.cs" />
+    <Compile Include="Paths\FilePath.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
