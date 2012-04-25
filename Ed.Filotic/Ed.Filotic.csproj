@@ -44,6 +44,7 @@
     <Compile Include="FileSystems\DirectoryFileSystem.cs" />
     <Compile Include="FileSystems\FileSystem.cs" />
     <Compile Include="FileSystems\FileSystemHelper.cs" />
+    <Compile Include="FileSystems\ReadOnlyFileSystem.cs" />
     <Compile Include="FileSystems\SubtreeFileSystem.cs" />
     <Compile Include="Paths\AbstractPath.cs" />
     <Compile Include="Paths\DirectoryPath.cs" />
