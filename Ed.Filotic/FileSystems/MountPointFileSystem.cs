@@ -46,7 +46,7 @@ namespace Ed.Filotic.FileSystems
         /// <param name="mountPath">
         /// The first-level path in which to mount this file system.
         /// </param>
-        public void Mount(FileSystem fileSystem, String mountPath)
+        public virtual void Mount(FileSystem fileSystem, String mountPath)
         {
             mountPath = mountPath.Trim();
 
@@ -73,11 +73,20 @@ namespace Ed.Filotic.FileSystems
         /// If the path was not registered, nothing happens.
         /// </remarks>
         /// <param name="mountPath"></param>
-        public void Unmount(String mountPath)
+        public virtual void Unmount(String mountPath)
         {
             String s = mountPath.Trim();
             Mounts.Remove(s);
             MountPaths.Remove(s);
+        }
+
+        /// <summary>
+        /// Unmounts all mounted file systems.
+        /// </summary>
+        public virtual void UnmountAll()
+        {
+            Mounts.Clear();
+            MountPaths.Clear();
         }
 
         public override DirectoryPath Root
@@ -91,6 +100,8 @@ namespace Ed.Filotic.FileSystems
             {
                 return false; // no files at the root level
             }
+
+            if (Mounts.ContainsKey(path.RawPathSegments[0]) == false) return false;
 
             FilePath sub;
             FileSystem fs = TransformPathToMountedPath(path, out sub);
@@ -106,6 +117,8 @@ namespace Ed.Filotic.FileSystems
                 case 1:
                     return Mounts.ContainsKey(path.RawPathSegments[0]);
                 default:
+                    if (Mounts.ContainsKey(path.RawPathSegments[0]) == false) return false;
+
                     DirectoryPath sub;
                     FileSystem fs = TransformPathToMountedPath(path, out sub);
                     return fs.Exists(sub);

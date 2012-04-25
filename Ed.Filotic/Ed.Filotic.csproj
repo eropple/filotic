@@ -41,10 +41,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FileAccessMode.cs" />
+    <Compile Include="FileSystems\WindowsPhysicalFileSystem.cs" />
     <Compile Include="FileSystems\DirectoryFileSystem.cs" />
     <Compile Include="FileSystems\FileSystem.cs" />
     <Compile Include="FileSystems\FileSystemHelper.cs" />
     <Compile Include="FileSystems\MountPointFileSystem.cs" />
+    <Compile Include="FileSystems\PhysicalFileSystem.cs" />
     <Compile Include="FileSystems\ReadOnlyFileSystem.cs" />
     <Compile Include="FileSystems\SubtreeFileSystem.cs" />
     <Compile Include="Paths\AbstractPath.cs" />
