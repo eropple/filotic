@@ -11,7 +11,7 @@ namespace Ed.Filotic.Paths
     /// <summary>
     /// A representation of a directory within a file system.
     /// </summary>
-    public sealed class DirectoryPath : AbstractPath
+    public class DirectoryPath : AbstractPath
     {
         public DirectoryPath(String[] pathSegments) 
             : base(pathSegments)

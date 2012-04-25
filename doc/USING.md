@@ -27,7 +27,7 @@ user-instantiated file system, but rather one created at startup.
 is used as the implementation of PhysicalFileSystem on Unix and as the
 implementation of each volume on Windows.
 - **MountPointFileSystem** is a purely virtual file system that allows the
-consuming code to mount other file systems at any arbitrary level within the
+consuming code to mount other file systems at any the first level within the
 file system. It is used as the base implementation of PhysicalFileSystem on
 Windows, with DirectoryFileSystems mounted below it.
 - **MemoryFileSystem** is a file system existing only in RAM. It's intended

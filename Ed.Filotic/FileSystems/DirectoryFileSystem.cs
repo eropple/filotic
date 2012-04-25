@@ -37,11 +37,15 @@ namespace Ed.Filotic.FileSystems
 
         public override bool Exists(FilePath path)
         {
+            if (path.RawPathSegments.Length == 0) return false;
+
             return File.Exists(PathToRealPath(path));
         }
 
         public override bool Exists(DirectoryPath path)
         {
+            if (path.RawPathSegments.Length == 0) return true;
+
             return Directory.Exists(PathToRealPath(path));
         }
 
